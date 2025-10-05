@@ -3,7 +3,7 @@ from playwright.sync_api import Page, expect
 from components.base_component import BaseComponent
 from components.view.empty_view_component import EmptyViewComponent
 from elements.button import Button
-from elements.fileInput import FileInput
+from elements.file_input import FileInput
 from elements.icon import Icon
 from elements.image import Image
 from elements.text import Text
