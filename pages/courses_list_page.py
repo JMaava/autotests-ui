@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 
 from components.view.empty_view_component import EmptyViewComponent
 from pages.base_page import BasePage
@@ -12,8 +12,8 @@ class CoursesListPage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.sidebar = SidebarComponent(page)
         self.navbar = NavbarComponent(page)
+        self.sidebar = SidebarComponent(page)
         self.empty_view = EmptyViewComponent(page, 'courses-list')
         self.course_view = CourseViewComponent(page)
         self.toolbar_view = CoursesListToolbarViewComponent(page)

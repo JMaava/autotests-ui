@@ -32,9 +32,9 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
         min_score='0',
     )
 
+    create_course_page.check_visible_exercises_empty_view()
     create_course_page.create_course_exercises_toolbar_view.check_visible()
     create_course_page.create_course_exercises_toolbar_view.click_create_exercise_button()
-    create_course_page.check_visible_exercises_empty_view()
 
     create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
     create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
